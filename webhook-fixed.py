@@ -29,14 +29,15 @@ def makeResponse(req):
     date = parameters.get("date")
     r=requests.get('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=9812c8a8af116387d12e7a699ad13a96')
     json_object = r.json()
-    speech = "Return2"
+
+    weather=json_object['list']
+    speech = "Return3"
     return {
     "speech": speech,
     "displayText": speech,
     "source": "apiai-weather-webhook"
     }
 
-    weather=json_object['list']
     for i in range(0,30):
         if date in weather[i]['dt_txt']:
             condition= weather[i]['weather'][0]['description']

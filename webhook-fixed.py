@@ -24,9 +24,9 @@ def webhook():
 
 def makeResponse(req):
     if req.get("result").get("action") != "fetchWeatherForecast":
-        speech = "damned if I know"
+        speech = "req"
         return {
-        "speech": req,
+        "speech": speech,
         "displayText": speech,
         "source": "apiai-weather-webhook"
         }

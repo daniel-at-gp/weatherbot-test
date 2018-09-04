@@ -29,6 +29,7 @@ def makeResponse(req):
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
     date = parameters.get("date")
+"""
     if city is None:
         return None
     r=requests.get('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=06f070197b1f60e55231f8c46658d077')
@@ -38,7 +39,9 @@ def makeResponse(req):
         if date in weather[i]['dt_txt']:
             condition= weather[i]['weather'][0]['description']
             break
-    speech = "The forecast for"+city+ "for "+date+" is "+condition
+           """
+  #  speech = "The forecast for"+city+ "for "+date+" is "+condition
+    speech = "damned if I know"
     return {
     "speech": speech,
     "displayText": speech,

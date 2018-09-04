@@ -34,7 +34,7 @@ def makeResponse(req):
     check ="CHK: " 
     for i in range(0,30):
         weatherDate = weather[i]['dt_txt']
-        check = check + " DT:" + weatherDate + "*" + weatherDate[10:] + " W:" + weather[i]['weather'][0]['description']
+        check = check + " DT:" + weatherDate + "*" + " W:" + weather[i]['weather'][0]['description']
 #        if date[10:] = weatherDate[10:]:
 #            check = check + " " + weather[i]['dt_text']  +" "
         if date in weather[i]['dt_txt']:

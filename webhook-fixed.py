@@ -31,8 +31,9 @@ def makeResponse(req):
     json_object = r.json()
 
     weather=json_object['list']
-    check ="CHK: " + json.dumps(weather)
+    check ="CHK: " 
     for i in range(0,30):
+        check = check + " DT:" weather[i]['dt_txt'] + " W:" + weather[i]['weather'][0]['description']
         if date in weather[i]['dt_txt']:
 #            check = check + " " + weather[i]['dt_text']  +" "
             condition= weather[i]['weather'][0]['description']

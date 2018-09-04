@@ -23,7 +23,7 @@ def webhook():
     return r
 
 def makeResponse(req):
-    speech = "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&appid=9812c8a8af116387d12e7a699ad13a96"
+    speech = "damned if I know"
     return {
     "speech": speech,
     "displayText": speech,

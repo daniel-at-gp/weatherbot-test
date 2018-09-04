@@ -36,7 +36,7 @@ def makeResponse(req):
             condition= weather[i]['weather'][0]['description']
             break
 
-    speech = "Return4"
+    speech = "Return4 " + city
     return {
     "speech": speech,
     "displayText": speech,

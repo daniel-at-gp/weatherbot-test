@@ -27,6 +27,13 @@ def makeResponse(req):
     parameters = result.get(parameters")
     city = parameters.get("geo-city")
     date = parameters.get("date")
+
+    speech = "Query for"+city+ "for "+date+"X"
+    return {
+    "speech": speech,
+    "displayText": speech,
+    "source": "apiai-weather-webhook"
+    }
                             
     r=requests.get('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=9812c8a8af116387d12e7a699ad13a96')
     json_object = r.json()

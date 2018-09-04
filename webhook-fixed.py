@@ -23,8 +23,9 @@ def webhook():
     return r
 
 def makeResponse(req):
+    speech = "AAA"
     return {
-    "speech": "AAA",
+    "speech": speech,
     "displayText": speech,
     "source": "apiai-weather-webhook"
     }

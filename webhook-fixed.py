@@ -42,7 +42,7 @@ def makeResponse(req):
             condition= weather[i]['weather'][0]['description']
             break
 
-    condition = "good! " + check
+#    condition = "good! " + check
     speech = "The forecast for "+city+ " for "+date+" is "+condition
     return {
     "fulfillmentText": speech,

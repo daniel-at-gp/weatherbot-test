@@ -25,7 +25,15 @@ def webhook():
 def makeResponse(req):
     result = req.get("queryResult")
     parameters = result.get("parameters")
-    speech = "CCC"
+    city = parameters.get("geo-city")
+    date = parameters.get("date")
+    speech = "Query for"+city+ "for "+date+"X"
+    return {
+    "speech": speech,
+    "displayText": speech,
+    "source": "apiai-weather-webhook"
+    }
+  
     return {
     "speech": speech,
     "displayText": speech,

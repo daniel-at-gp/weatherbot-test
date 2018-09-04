@@ -23,7 +23,7 @@ def webhook():
     return r
 
 def makeResponse(req):
-    speech = "req"
+    speech = print(json.dumps(req, indent=4))
     return {
     "speech": speech,
     "displayText": speech,

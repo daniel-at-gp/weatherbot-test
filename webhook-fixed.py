@@ -31,18 +31,12 @@ def makeResponse(req):
     json_object = r.json()
 
     weather=json_object['list']
-    check ="CHK: " 
     for i in range(0,30):
         weatherDate = weather[i]['dt_txt']
-        check = check + " DT:" + weatherDate + "*" + weatherDate[:10] + " W:" + weather[i]['weather'][0]['description']
-#        if date[10:] = weatherDate[10:]:
-#            check = check + " " + weather[i]['dt_text']  +" "
         if date[:10] == weatherDate[:10]:
-#        if date in weather[i]['dt_txt']:
             condition= weather[i]['weather'][0]['description']
             break
 
-#    condition = "good! " + check
     speech = "The forecast for "+city+ " for "+date+" is "+condition
     return {
     "fulfillmentText": speech,

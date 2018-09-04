@@ -23,6 +23,7 @@ def webhook():
     return r
 
 def makeResponse(req):
+    result = req.get("queryResult")
     speech = "AAA"
     return {
     "speech": speech,

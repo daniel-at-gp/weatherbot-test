@@ -24,7 +24,8 @@ def webhook():
 
 def makeResponse(req):
     result = req.get("queryResult")
-    speech = "BBB"
+    parameters = result.get(parameters")
+    speech = "CCC"
     return {
     "speech": speech,
     "displayText": speech,
